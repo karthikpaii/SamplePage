@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        body{
+            background:#EEE;
+        }
+.first{
+    height: 350px;
+    width: 350px;
+    position: absolute;
+            left: 50%;
+            top: 50%;
+           
+            margin: -150px;
+    background:#EEE;
+    border: 0px solid black;
+    position: absolute;
+    
+}
+.content{
+    height: 100%;
+    width: 100%;
+      transition:transform 1s;
+      transform-style: preserve-3d;
+}
+
+
+
+.front, .back{
+   width: 100%;
+            height: 100%;
+            position: absolute;
+            background: #fff;
+            font-size: 25px;
+            text-align: center;
+            line-height: 300px;
+            border-radius: 5px;
+            color: tomato;
+           
+           
+}
+
+.back{
+    background: green;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.first:hover .content{
+    transform: rotateY(180deg);
+     box-shadow: black;
+} 
+
+    </style>
+</head>
+<body>
+  <div class="first">
+    <div class="content">
+      <div class="front">Front</div>
+      <div class="back">Back</div>
+    </div>
+  </div>  
+</body>
+</html>
