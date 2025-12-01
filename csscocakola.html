@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:sans-serif;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: black;
+    
+    }
+    .card{
+        position: relative;
+        width: 350px;
+        height: 350px;
+         border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+       
+        transition-delay: 0.5s;
+    }
+    .card:hover{
+    width: 600px;
+    transition-delay: 0.5s;
+    }
+
+    .card .circle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card .circle::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background:#191919;
+        border: 8px solid var(--clr);
+        filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+        transition: 0.5s, background 0.5s;
+        transition-delay: 0.75s,1s;
+    }
+    </style>
+</head>
+<body>
+    <!---Created By Refering Youtube-->
+    <div class="card">
+        <div class="circle" style="--clr:#f40103;">
+            <img src="cocacola (2).png" class="logo">
+        </div>
+    </div>
+</body>
+</html>
