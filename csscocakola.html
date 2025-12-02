@@ -51,7 +51,7 @@
 
     .card .circle::before
     {
-        content: '';
+        content:'';
         position: absolute;
         top: 0;
         left: 0;
@@ -64,6 +64,48 @@
         transition: 0.5s, background 0.5s;
         transition-delay: 0.75s,1s;
     }
+
+    .card:hover .circle::before
+    {
+        transition-delay: 0.5s;
+         width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background:red;
+
+    }
+    .card .circle .logo{
+        position: relative;
+        width: 250px;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+    }
+
+
+     .card:hover .circle .logo
+     {
+        transition: scale(0);
+        transition-delay: 0s;
+     }
+     .card .product_img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0) rotate(315deg);
+        height:300px;
+        transition: 0.5s ease-in-out;
+     }
+
+     .card:hover .product_img{
+        transition-delay: 0.75s;
+        top: 25%;
+        left: 80%;
+        height: 200px;
+        transform: translate(-50%, -50%) scale(1) rotate(15deg);
+     
+    }
+
+     
     </style>
 </head>
 <body>
@@ -72,6 +114,7 @@
         <div class="circle" style="--clr:#f40103;">
             <img src="cocacola (2).png" class="logo">
         </div>
+        <img src="product.png" class="product_img">
     </div>
 </body>
 </html>
