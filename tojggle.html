@@ -12,32 +12,22 @@
     
     }
 
-    details:not([open]) summary::before
+    details:not([open])
     {
         width: 80px;
     }
-        details:not([open]) summary::before
-        {
-            content: '-';
-        }
     summary{
         background: #dadada;
         text-align: left;
          list-style: none
     }
-
-    summary::before{
-        content: '+';
-        margin-right: 5px;
-    }
-
    </style>
     <title>Document</title>
 </head>
 <body>
     <details>
         <!---New thing learnec &#9776-->
-        <summary></summary>
+        <summary>&#9762;</summary>
         <ul>
             <li>Home</li>
             <li>About</li>
