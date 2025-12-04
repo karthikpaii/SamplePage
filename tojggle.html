@@ -17,17 +17,39 @@
         width: 80px;
     }
     summary{
-        background: #dadada;
+     
         text-align: left;
          list-style: none
     }
+    #main{
+        background: tomato;
+        height: 35px;
+        position: absolute;
+    }
+
+      body.dark
+        {
+            background-color: #000;
+            color: white;
+        }
+        #sub
+        {
+            display: flex;
+        }
+
+        #preview{
+            padding-left: 500px;
+            position: relative;
+        }
    </style>
     <title>Document</title>
 </head>
 <body>
+    <div id="main">
+        <div id="sub">
     <details>
         <!---New thing learnec &#9776-->
-        <summary>&#9762;</summary>
+        <summary>&#9776;</summary>
         <ul>
             <li>Home</li>
             <li>About</li>
@@ -35,5 +57,10 @@
             <li>Contact</li>
         </ul>
     </details>
+    <div id="preview">
+        Dark Mode <input type="checkbox" onclick="document.body.classList.toggle('dark')"
+    </div>
+    </div>
+    </div>
 </body>
 </html>
