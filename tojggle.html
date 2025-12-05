@@ -8,8 +8,9 @@
     {
         width: 140px;
         height: 300px;
-       
-    
+       border: 1px solid black;
+       border-radius: 39px;
+       position: relative;
     }
 
     details:not([open])
@@ -20,6 +21,12 @@
      
         text-align: left;
          list-style: none
+    }
+
+    details::before{
+     
+        border-radius: none;
+        float: i;
     }
     #main{
         background: tomato;
