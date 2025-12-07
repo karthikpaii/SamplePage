@@ -8,7 +8,7 @@
     {
         width: 140px;
         height: 300px;
-       border: 1px solid black;
+       /* border: 1px solid black; */
        border-radius: 39px;
        position: relative;
     }
@@ -25,13 +25,14 @@
 
     details::before{
      
-        border-radius: none;
-        float: i;
+        
     }
     #main{
         background: tomato;
         height: 35px;
-        position: absolute;
+        position: relative;
+        display: flex;
+
     }
 
       body.dark
@@ -42,13 +43,20 @@
         #sub
         {
             display: flex;
+            position: fixed;
+            padding-left: 50px;
+            
+
         }
 
         #preview{
-            padding-left: 500px;
+            padding-left: 550px;
             position: relative;
+            gap: 100px;
         }
-   </style>
+
+                     
+        </style>
     <title>Document</title>
 </head>
 <body>
@@ -65,9 +73,11 @@
         </ul>
     </details>
     <div id="preview">
-        Dark Mode <input type="checkbox" onclick="document.body.classList.toggle('dark')"
+        <div class="red">
+        Dark Mode <input type="checkbox" onclick="document.body.classList.toggle('dark')">
     </div>
     </div>
+   </div>
     </div>
 </body>
 </html>
