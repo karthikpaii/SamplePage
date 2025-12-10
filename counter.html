@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            counter-reset: my-counter 0;
+        }
+
+        h2::before
+        {
+            content: "Chapter " counter(my-counter,upper-roman)  ":";
+            counter-increment: my-counter ;
+        }
+
+        p::before
+        {
+            content: "Paragraph " counter(my-counter,lower-roman) ":" ;
+            counter-increment: my-counter;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit repellat ipsa iusto, veniam iste.</p>
+
+
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit repellat ipsa iusto, veniam iste.</p>
+    
+
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit repellat ipsa iusto, veniam iste.</p>
+    
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit repellat ipsa iusto, veniam iste.</p>
+    
+</body>
+</html>
