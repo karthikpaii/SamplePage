@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            padding: 10px 20px;
+           
+        }
+        nav ul{
+            display: flex;
+              list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #bgcolor
+        {
+            padding: 0;
+            align-items: center;
+        }
+        body:has(#bgcolor:checked)
+        {
+            background: black;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div id="nav">
+        <nav>
+            <h1>Food Delivery Website</h1>
+            <ul>
+                <li>home</li>
+                <li>Privacy</li>
+                <li>About US</li>
+                <li>Contact US</li>
+               <i class="fa-solid fa-moon"></i> Dark Mode  <input type="checkbox" id="bgcolor">
+            </ul>
+             
+        </nav>
+     
+
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
