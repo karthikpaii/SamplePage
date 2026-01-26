@@ -16,7 +16,7 @@
           
            grid-template-rows: repeat(2,100px);
            grid-gap: 15px;
-
+grid-auto-flow: column dense;
            grid-auto-rows: 50px;
           justify-content: space-evenly;
           align-content: space-evenly;
@@ -53,13 +53,14 @@
         .items6
         {
             background: goldenrod;
+            grid-column: span 2;
           
         }
 
         .items7
         {
             background: firebrick;
-            grid-column: span 2;
+            
         }
 
         .items8
