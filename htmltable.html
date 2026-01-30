@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table and Form Example</title>
+</head>
+<body>
+
+    <h1>Student Information</h1>
+
+    <!-- Table -->
+    <h2>Student List</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>Action</th>
+           
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Rahul</td>
+            <td>MCA</td>
+            <td>1st Year</td>
+            <td> <button id="delete">Delete</button>
+            <button id="update">Update</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Dev</td>
+            <td>MCA</td>
+            <td>2nd Year</td>
+            <td> <button id="delete">Delete</button>
+            <button id="update">Update</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Rajesh</td>
+            <td>MCA</td>
+            <td>3rd Year</td>
+            <td> <button id="delete">Delete</button>
+            <button id="update">Update</button></td>
+        </tr>
+       
+    </table>
+
+    <br><br>
+
+    <!-- Form -->
+    <h2>Student Registration Form</h2>
+
+    <form>
+
+        <!-- Text input -->
+        Name: <input type="text" name="name"><br><br>
+
+        <!-- Email input -->
+        Email: <input type="email" name="email"><br><br>
+
+        <!-- Password input -->
+        Password: <input type="password" name="password"><br><br>
+
+        <!-- Radio buttons -->
+        Gender:
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br><br>
+
+        <!-- Checkbox -->
+        Languages Known:
+        <input type="checkbox"> English
+        <input type="checkbox"> Hindi
+        <input type="checkbox"> Kannada
+        <br><br>
+
+        <!-- Dropdown (Select) -->
+        Course:
+        <select>
+            <option>BCA</option>
+            <option>BSc</option>
+            <option>BCom</option>
+            <option>BA</option>
+        </select>
+        <br><br>
+
+        <!-- Textarea -->
+        Address:<br>
+        <textarea rows="4" cols="30"></textarea>
+        <br><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>
