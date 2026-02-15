@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Information</title>
+</head>
+<body>
+
+<h2>Select a City</h2>
+
+<select onchange="showCity(this.value)">
+    <option value="">-- Select City --</option>
+    <option value="delhi">New Delhi</option>
+    <option value="mumbai">Mumbai</option>
+    <option value="bangalore">Bangalore</option>
+</select>
+
+<br><br>
+
+<table border="1" id="cityTable" style="display:none; width:60%;">
+    <tr>
+        <th>City</th>
+        <th>Description</th>
+        <th>Image</th>
+    </tr>
+    <tr>
+        <td id="cityName"></td>
+        <td id="cityDesc"></td>
+        <td><img id="cityImg" width="200"></td>
+    </tr>
+</table>g3
+
+<script>
+function showCity(city)
+{
+    let table = document.getElementById("cityTable");
+    let name = document.getElementById("cityName");
+    let desc = document.getElementById("cityDesc");
+    let img = document.getElementById("cityImg");
+
+    if(city === "delhi")
+    {
+        name.innerHTML = "New Delhi";
+        desc.innerHTML = "New Delhi is the capital of India, known for its historic monuments, government buildings, and rich cultural heritage.";
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/d/d1/India_Gate_in_New_Delhi_03-2016.jpg";
+        table.style.display = "table";
+    }
+    else if(city === "mumbai")
+    {
+        name.innerHTML = "Mumbai";
+        desc.innerHTML = "Mumbai is the financial capital of India, famous for Bollywood, Marine Drive, Gateway of India, and vibrant city life.";
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/0/0c/Gateway_of_India_Mumbai.jpg";
+        table.style.display = "table";
+    }
+    else if(city === "bangalore")
+    {
+        name.innerHTML = "Bangalore";
+        desc.innerHTML = "Bangalore is the Silicon Valley of India, known for its IT industry, pleasant climate, parks, and modern lifestyle.";
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/4/4f/Vidhana_Soudha_Bangalore.jpg";
+        table.style.display = "table";
+    }
+    else
+    {
+        table.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return validateAddress()">
+        Enter Email:
+        <input type="text" id="address">
+        <input type="submit" id="submit" value="submit">
+        <p id="message"></p>
+
+    </form>
+<script>
+    function validateAddress()
+{
+    let add=document.getElementById("address").value;
+    let addV=/^\s+ $/;
+
+    if(addV.test(add))
+{
+    document.getElementById("message").innerHTML=" Valid Address";
+}else{
+    document.getElementById("message").innerHTML="IN Valid Add";
+}
+return false
+
+}
+</script>
+   </body>
+   </html>
