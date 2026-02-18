@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+<script>
+
+// Function with argument and return value
+function checkEvenOdd(number) {
+    if (number % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+// Function call
+let result1 = checkEvenOdd(20);
+document.write("Number is: " + result1);
+
+function Stringlen(str)
+{
+    let count=0;
+    for(let i=0;i<str.length;i++)
+     {
+        count=count+1
+
+     }
+     return count;
+
+    
+
+}
+ let c=Stringlen('Hello')
+ document.write("Count is"+c)
+</script>
+
+</body>
+</html>
