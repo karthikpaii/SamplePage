@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Float Layout Example</title>
+
+<style>
+
+body{
+  font-family: Arial;
+}
+
+/* Sidebar */
+.sidebar{
+  float:left;
+  width:200px;
+  background:#e0e0e0;
+  padding:15px;
+  min-height:300px;
+}
+
+/* Main Content */
+.main{
+  margin-left:220px; /* space for sidebar */
+  padding:15px;
+}
+
+/* Floating image inside content */
+.main img{
+  float:right;
+  margin:10px;
+  width:150px;
+}
+
+/* Clear float */
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="clearfix">
+
+  <div class="sidebar">
+    <h3>Sidebar</h3>
+    <p>Navigation</p>
+    <p>Links</p>
+    <p>Menu</p>
+  </div>
+
+  <div class="main">
+    <h2>Main Content</h2>
+
+    <img src="https://picsum.photos/150" alt="sample image">
+
+    <p>
+    This is the main content area. The image is floated to the right
+    side of the text. The text wraps around the image automatically.
+    </p>
+
+    <p>
+    CSS float property allows elements to be positioned left or right
+    inside a container.
+    </p>
+
+  </div>
+
+</div>
+
+</body>
+</html>
