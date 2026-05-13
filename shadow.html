@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Gradient</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        body{
+            background: #222;
+        }
+
+        #box{
+            width: 400px;
+            height: 250px;
+            background: #262626;
+            position: relative;
+            margin: 50px;
+        }
+        #box::after,
+        #box:before{
+            content: "";
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            animation: animated-shadow 10s  linear infinite alternate;
+        }
+
+        #box::after{
+            filter: blur(30px);
+        }
+
+        @keyframes animated-shadow{
+            0%{
+                  background-position: 0 0;
+            }
+            50%{
+                 background-position: 100% 0;
+            }
+            100%{
+               background-position: 0 0;  
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
