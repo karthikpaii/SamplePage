@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniamted Button</title>
+    <style>
+        .btn{
+            border: 1px solid#c0329b;
+            color: c0329b;
+            text-decoration: none;
+            padding: 5px 10px;
+            display: inline-block;
+            font-size: 16px;
+            position: relative;
+            transition: all 0.5s ease  0s;
+        }
+
+        .btn::after{
+            background-color: #c0329b;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            z-index: -1;
+             transition: all 0.5s ease  0s;
+
+        }
+
+        .btn:hover{
+            color: white;
+        }
+
+        .btn:hover:after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="btn">Save</a>
+</body>
+</html>
