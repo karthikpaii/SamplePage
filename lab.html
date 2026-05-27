@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+    }
+    .box {
+      width: 320px;
+      margin: 80px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 8px gray;
+      text-align: center;
+    }
+    input, button {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+    button {
+      background: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Register</h2>
+    <form id="regForm">
+      <input type="text" id="name" placeholder="Name">
+      <div id="nameErr" class="error"></div>
+
+      <input type="email" id="email" placeholder="Email">
+      <div id="emailErr" class="error"></div>
+
+      <input type="password" id="password" placeholder="Password">
+      <div id="passErr" class="error"></div>
+
+      <button type="submit">Register</button>
+    </form>
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    document.getElementById("regForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let pass = document.getElementById("password").value;
+      let valid = true;
+
+      if (name === "") {
+        document.getElementById("nameErr").innerHTML = "Name required";
+        valid = false;
+      } else {
+        document.getElementById("nameErr").innerHTML = "";
+      }
+
+      if (!email.includes("@")) {
+        document.getElementById("emailErr").innerHTML = "Invalid email";
+        valid = false;
+      } else {
+        document.getElementById("emailErr").innerHTML = "";
+      }
+
+      if (pass.length < 6) {
+        document.getElementById("passErr").innerHTML = "Min 6 characters";
+        valid = false;
+      } else {
+        document.getElementById("passErr").innerHTML = "";
+      }
+
+      if (valid) {
+        document.getElementById("msg").innerHTML = "✅ Registration Successful!";
+      }
+    });
+  </script>
+
+</body>
+</html>

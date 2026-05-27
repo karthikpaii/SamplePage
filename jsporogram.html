@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container
+        {
+            width: 350px;
+            height: 300px;
+            background-color: aliceblue;
+            padding: 10px;
+            border: 2px solid black;
+
+        }
+        #sub
+        {
+            background-color: red;
+            width: 340px;
+            height: 40px;
+            color: white;
+        }
+
+        th{
+            background-color: skyblue;
+            padding-left: 10px;
+            width: 70px ;
+            
+        }
+
+        #tablee
+        {
+            margin-top: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+          <h1>Student Marks Manager</h1>
+          <input type="text" id="name" name="name" placeholder="ENter your NAme">  <br><br>
+          <input type="number" id="m1" name="m2" placeholder="ENter your Mark1">  <br><br>
+          <input type="number" id="m2" name="m2" placeholder="ENter your Mark2">  <br><br>
+          <input type="number" id="m3" name="m3" placeholder="ENter your Mark3">  <br><br>
+          <button id="sub" onclick="addStu()" >Submit</button>
+
+          
+        </div>
+        </div>
+
+        <table id="sttable" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Mark 1</th>
+                <th>MArk 2</th>
+                <th>MArk </th>
+            </tr>
+        </table>
+    
+
+    <script>
+        function addStu()
+        {
+        let sname=document.getElementById("name").value;
+        let m1=Number(document.getElementById("m1").value);
+        let m2=Number(document.getElementById("m2").value);
+        let m3=Number(document.getElementById("m3").value);
+        if(sname===""||isNaN(m1)||isNaN(m2)||isNaN(m3))
+        {
+        alert("Please Enter Something");
+        return;
+        }
+
+        let total=m1+m2+m3;
+        let avg=total/3;
+        let grade;
+
+        if(avg>=90)
+            grade='A';
+        else if(avg>=80)
+           grade='B';
+        else if(avg>=70)
+           grade='c';
+        else if(avg>=60)
+           grade='D';
+        else
+            grade='f';
+
+
+            let table=document.getElementById("sttable")
+            let row=table.insertRow();
+
+            row.insertCell(0).innerHTML=sname;
+            row.insertCell(1).innerHTML=total;
+            row.insertCell(2).innerHTML=avg.toFixed(2);
+            row.insertCell(3).innerHTML=grade;
+
+            document.getElementById("name").value="";
+            document.getElementById("m1").value="";
+            document.getElementById("m2").value="";
+            document.getElementById("m3").value="";
+           
+
+    }
+    </script>
+</body>
+</html>

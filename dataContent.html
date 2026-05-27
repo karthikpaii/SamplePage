@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container with Sidebar Tabs</title>
+    <style>
+        .container {
+    display: flex;
+    height: 450px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+aside {
+    height: 450px;
+    border: 2px solid black;
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main {
+    height: 450px;
+    border: 2px solid black;
+    flex: 0.7;
+    line-height: 25px;
+    text-align: center;
+}
+
+main p {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+aside div {
+    border: 2px solid black;
+    width: fit-content;
+    padding: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #ddd;
+}
+    </style>
+  
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <!-- Hint : your code should be somewhere here -->
+           
+
+            <div class="tab" data-content="ai-agents" >
+                <span>AI Agents</span>
+            </div>
+            <div class="tab" data-content="spacy-library">
+                <span>Spacy Library</span>
+            </div>
+            <div class="tab" data-content="lasso-regression" >
+                <span>Lasso Regression</span>
+            </div>
+        </aside>
+        <main id="content">
+            <h2>What are AI Agents?</h2>
+            <p>AI agents are software programs that perform tasks autonomously using artificial intelligence techniques. They are designed to interact with their environment, make decisions, learn from experiences, and act toward achieving specific goals. AI agents can vary in complexity, from simple rule-based systems to advanced models that use machine learning and natural language processing.</p>
+        </main>
+    </div>
+
+    <script>
+        const tabContent = {
+            "ai-agents": {
+                title: "What are AI Agents?",
+                content: "AI agents are software programs that perform tasks autonomously using artificial intelligence techniques. They are designed to interact with their environment, make decisions, learn from experiences, and act toward achieving specific goals. AI agents can vary in complexity, from simple rule-based systems to advanced models that use machine learning and natural language processing."
+            },
+            "spacy-library": {
+                title: "What is the Spacy Library?",
+                content: "Spacy is a popular open-source library for Natural Language Processing (NLP) in Python. It is known for its fast and efficient tokenization and provides pre-trained models for tasks like named entity recognition, part-of-speech tagging, and text classification."
+            },
+            "lasso-regression": {
+                title: "What is Lasso Regression?",
+                content: "Lasso Regression is a type of linear regression that uses shrinkage, where the data values are shrunk towards a central point, like the mean. It uses L1 regularization, which can lead to sparse models by driving some coefficient estimates to zero, thus performing feature selection."
+            }
+        };
+
+        const tabs = document.querySelectorAll('.tab');
+        const contentArea = document.getElementById('content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const contentKey = tab.getAttribute('data-content');
+                const content = tabContent[contentKey];
+
+                contentArea.innerHTML = `
+                    <h2>${content.title}</h2>
+                    <p>${content.content}</p>
+                `;
+            });
+        });
+
+        tabs[0].classList.add('active');
+    </script>
+</body>
+</html>

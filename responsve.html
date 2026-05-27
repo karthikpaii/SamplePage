@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welocme to Bajpe</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        #box
+        {
+            width: 1200px;
+            height: 150px;
+            background: #edcece;
+            border:2px solid black;
+            overflow: hidden;
+            text-align: center;
+        }
+        #main
+        {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            background-color: yellow;
+        }
+
+        #box button
+        {
+            text-align: center;
+            margin-top: 12px;
+            margin-left: 20px;
+            width: 80px;
+            
+        }
+
+        @media screen and (max-width:768px)
+        {
+            #main
+            {
+                flex-direction: column;
+            }
+            #box
+            {
+             width: auto; 
+             background: red; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h2>Product Details</h2>
+
+    <div id="container">
+        <div id="main">
+            <div id="box"><h4>Laptop</h4> <p>Price:8lakh</p><button id="buy">Buy</button></div>
+            <div id="box"><h4>Laptop</h4> <p>Price:8lakh</p><button id="buy">Buy</button> </div>
+            <div id="box"><h4>Laptop</h4> <p>Price:8lakh</p> <button id="buy">Buy</button></div>
+             <div id="box"><h4>Laptop</h4> <p>Price:8lakh</p> <button id="buy">Buy</button></div>
+              <div id="box"><h4>Laptop</h4> <p>Price:8lakh</p> <button id="buy">Buy</button></div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return ValidateE()">
+        Enter Email:
+        <input type="text" id="em">
+        <input type="submit" id="submit" value="submit">
+        <p id="message"></p>
+    </form>
+    
+    <script>
+        function ValidateE()
+        {
+           let email= document.getElementById("em").value;
+           let epat=/^[a-z0-9]+[^\s]*@[a-z]+[\.][a-z]{2,3}$/;
+
+           if(epat.test(email))
+           {
+            document.getElementById("message").innerHTML="Valid Email";
+
+           }
+           else
+           {
+            document.getElementById("message").innerHTML="not Valid Email";
+           }
+           return false;
+        }
+    </script>
+</body>
+</html>

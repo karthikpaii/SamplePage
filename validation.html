@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            padding: 8px;
+            margin: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="post" id="regForm">
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <div id="nameError" class="error"></div>
+
+         <input type="email" name="email" id="email" placeholder="Enter your email">
+        <div id="emailerror" class="error"></div>
+
+         <input type="password" name="password" id="password" placeholder="Enter your password">
+        <div id="passError" class="error"></div>
+
+        <button type="submit">Submit</button>
+
+        <p id="msg"></p>
+
+        <script>
+
+             document.getElementById('regForm').addEventListener("submit",function(e)
+        {
+            e.preventDefault();
+            let sname=document.getElementById("name").value;
+            let em=document.getElementById("email").value;
+            let pass=document.getElementById('password').value;
+
+           
+
+            let valid=true;
+            if(sname==="")
+        {
+            document.getElementById("nameError").innerHTML="Enter the Name";
+            valid=false;
+        }else{
+            document.getElementById("nameError").innerHTML="";
+        }
+
+
+        if(!em.includes('@'))
+        {
+            document.getElementById("emailerror").innerHTML="Enter the email";
+            valid=false;
+        }else{
+            document.getElementById("emailerror").innerHTML="";
+        }
+
+        if(pass.length<=6)
+      {
+            document.getElementById("passError").innerHTML="Enter the passowed";
+            valid=false;
+        }else{
+            document.getElementById("passError").innerHTML="";
+        }
+
+        if(valid)
+        {
+            document.getElementById("msg").innerHTML="Registration SUcesfulls";
+          
+        }
+
+
+
+        })
+        </script>
+    </form>
+</body>
+</html>

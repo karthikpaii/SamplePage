@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            padding: 0 0 0  40px;
+        }
+
+        .container
+        {
+            background: #eee;
+          margin:50px;
+          padding: 0px;
+        
+          border: 3px solid #000;
+          display: flex;
+          
+        
+        
+          
+        
+        }
+        .items{
+            color: #fff;
+            
+            height: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 0px;
+            
+           
+        }
+
+        .items1{background: red;
+           flex: 0 1 200px;
+        }
+        .items2{background: pink;}
+        .items3{background: rgb(132, 0, 255);}
+        .items4{background: yellow;}
+        .items5{background: green; flex-grow: 1;}
+    </style>
+</head>
+<body>
+    <h1>Flex Shrink</h1>
+    <div class="container">
+        <div class="items items1">One</div>
+        <div class="items items2">Two</div>
+        <div class="items items3">Three</div>
+        <div class="items items4">Four</div>
+        <div class="items items5">Five</div>
+         <div class="items items3">Three</div>
+    </div>
+</html>

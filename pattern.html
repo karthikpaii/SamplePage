@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return checkPalindrome()">
+  <input id="num" placeholder="Enter number" required>
+  <button>Check</button>
+</form>
+
+<p id="res"></p>
+
+<script>
+function checkPalindrome() {
+  let n = document.getElementById('num').value;
+  let r = n.split('').reverse().join('');
+  document.getElementById('res').textContent = 
+      n === r ? "Palindrome" : "Not a palindrome";
+
+  return false; // Prevent form submission
+}
+</script>
+
+</body>
+</html>

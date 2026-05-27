@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marks Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    table {
+      width: 100%;
+      margin-top: 15px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Student Marks Manager</h1>
+
+  <input type="text" id="name" placeholder="Student Name">
+  <input type="number" id="m1" placeholder="Subject 1 Marks">
+  <input type="number" id="m2" placeholder="Subject 2 Marks">
+  <input type="number" id="m3" placeholder="Subject 3 Marks">
+
+  <button onclick="addStudent()">Add Student</button>
+
+  <table id="resultTable">
+    <tr>
+      <th>Name</th>
+      <th>Total</th>
+      <th>Average</th>
+      <th>Grade</th>
+    </tr>
+  </table>
+</div>
+
+<script>
+  function addStudent() {
+    let name = document.getElementById("name").value;
+    let m1 = Number(document.getElementById("m1").value);
+    let m2 = Number(document.getElementById("m2").value);
+    let m3 = Number(document.getElementById("m3").value);
+
+    if (name === "" || isNaN(m1) || isNaN(m2) || isNaN(m3)) {
+      alert("Please enter all fields correctly!");
+      return;
+    }
+
+    let total = m1 + m2 + m3;
+    let avg = total / 3;
+    let grade;
+
+    if (avg >= 90) grade = "A";
+    else if (avg >= 75) grade = "B";
+    else if (avg >= 60) grade = "C";
+    else if (avg >= 40) grade = "D";
+    else grade = "Fail";
+
+    let table = document.getElementById("resultTable");
+    let row = table.insertRow();
+
+    row.insertCell(0).innerHTML = name;
+    row.insertCell(1).innerHTML = total;
+    row.insertCell(2).innerHTML = avg.toFixed(2);
+    row.insertCell(3).innerHTML = grade;
+
+    // Clear inputs
+    document.getElementById("name").value = "";
+    document.getElementById("m1").value = "";
+    document.getElementById("m2").value = "";
+    document.getElementById("m3").value = "";
+  }
+</script>
+
+</body>
+</html>

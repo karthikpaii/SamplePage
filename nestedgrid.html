@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            background: #eee;
+            width: 480px;
+            height: 220px;
+            margin: 45px 0 0 50px;
+            display: grid;
+           grid-template-columns: repeat(3,150px);
+          
+           grid-template-rows: repeat(2,100px);
+           grid-gap: 15px;
+
+        }
+        .items1
+        {
+            background: orangered;
+           
+        }
+        
+        .items2
+        {
+            background: yellowgreen;
+           
+        }
+
+        .items3
+        {
+            background: slateblue;
+          
+        }
+
+        .items4
+        {
+            background: hotpink;
+            display: grid;
+           
+            grid-gap: 2px;
+           grid-template-columns: 1fr 1fr;
+
+        }
+.items4>div{
+    background: red;
+    width: 35px;
+}
+
+        .items5
+        {
+            background: royalblue;
+        }
+
+        .items6
+        {
+            background: goldenrod;
+           
+          
+        }
+
+        .items7
+        {
+            background: firebrick;
+            
+        }
+
+        .items8
+        {
+            background: fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:red; text-align: center;">Css grid</h1>
+    <div class="container">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth
+            <div class="one">One</div>
+            <div class="two">Two</div>
+            <div class="three">Three</div>
+        </div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+
+    </div>
+    
+</body>
+</html> 
